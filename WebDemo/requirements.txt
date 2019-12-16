@@ -8,7 +8,7 @@ docutils-stubs==0.0.21
 idna==2.8
 invoke==1.2.0
 numpy==1.16.4
-Pillow==6.0.0
+Pillow==6.2.0
 PyGithub==1.43.7
 Pygments==2.4.2
 PyJWT==1.7.1
