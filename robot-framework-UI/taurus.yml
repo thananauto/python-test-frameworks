@@ -1,0 +1,6 @@
+execution:
+- executor: selenium
+  runner: robot
+  hold-for: 1m
+  scenario:
+    script: robot_tests/

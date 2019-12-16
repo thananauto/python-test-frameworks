@@ -1,0 +1,5 @@
+datasources:97313abcc0f650accb0a478edf237a1efe14c878
+commandlineoptions:6fec63e0b54401e6ba6d84843cb86c2777a4ecdb
+suitesfrom:no-suites-from-option
+file:8bba8e7c02b3bd3685019163f53df5bbdbd2ec2e
+--suite Suites.Student Service.TC 001 Get Request

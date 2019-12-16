@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190709 12:24:11.945" rpa="false">
+<suite id="s1" name="Robot Tests" source="C:\projects\python-workspace\robot-framework-UI\robot_tests">
+<kw name="Open Browser" library="search_flights_keyword" type="setup">
+<arguments>
+<arg>${BROWSER}</arg>
+<arg>${PATH}</arg>
+</arguments>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${PATH}</arg>
+</arguments>
+<msg timestamp="20190709 12:24:12.273" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20190709 12:24:12.272" endtime="20190709 12:24:15.077"></status>
+</kw>
+<status status="PASS" starttime="20190709 12:24:12.272" endtime="20190709 12:24:15.078"></status>
+</kw>
+<suite id="s1-s1" name="Search Flights" source="C:\projects\python-workspace\robot-framework-UI\robot_tests\search_flights.robot">
+<test id="s1-s1-t1" name="The User can search for flights">
+<kw name="Launc application url" library="search_flights_keyword">
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20190709 12:24:15.088" level="INFO">Opening url 'http://blazedemo.com'</msg>
+<status status="PASS" starttime="20190709 12:24:15.088" endtime="20190709 12:24:16.081"></status>
+</kw>
+<status status="PASS" starttime="20190709 12:24:15.087" endtime="20190709 12:24:16.081"></status>
+</kw>
+<kw name="Select the departure city" library="search_flights_keyword">
+<arguments>
+<arg>Paris</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath://select[@name='fromPort']</arg>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20190709 12:24:16.090" level="INFO">Selecting options from selection list 'xpath://select[@name='fromPort']' by value Paris.</msg>
+<status status="PASS" starttime="20190709 12:24:16.089" endtime="20190709 12:24:16.300"></status>
+</kw>
+<status status="PASS" starttime="20190709 12:24:16.088" endtime="20190709 12:24:16.300"></status>
+</kw>
+<kw name="Select the arrival city" library="search_flights_keyword">
+<arguments>
+<arg>London</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath://select[@name='toPort']</arg>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20190709 12:24:16.302" level="INFO">Selecting options from selection list 'xpath://select[@name='toPort']' by value London.</msg>
+<status status="PASS" starttime="20190709 12:24:16.301" endtime="20190709 12:24:16.648"></status>
+</kw>
+<status status="PASS" starttime="20190709 12:24:16.301" endtime="20190709 12:24:16.649"></status>
+</kw>
+<kw name="Submit the login" library="search_flights_keyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>css:input[type='submit']</arg>
+</arguments>
+<msg timestamp="20190709 12:24:16.664" level="INFO">Clicking button 'css:input[type='submit']'.</msg>
+<status status="PASS" starttime="20190709 12:24:16.663" endtime="20190709 12:24:17.247"></status>
+</kw>
+<status status="PASS" starttime="20190709 12:24:16.662" endtime="20190709 12:24:17.248"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>css:table[class='table']&gt;tbody tr</arg>
+</arguments>
+<assign>
+<var>@{flights}</var>
+</assign>
+<msg timestamp="20190709 12:24:17.290" level="INFO">@{flights} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="26d8e14ca74732d83bc6cbd3334f411a", element="f46c8238-0dfc-4931-a64d-1324178e6b45")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20190709 12:24:17.249" endtime="20190709 12:24:17.290"></status>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is not empty.</doc>
+<arguments>
+<arg>${flights}</arg>
+</arguments>
+<msg timestamp="20190709 12:24:17.291" level="INFO">Length is 5</msg>
+<status status="PASS" starttime="20190709 12:24:17.291" endtime="20190709 12:24:17.291"></status>
+</kw>
+<tags>
+<tag>search_flights</tag>
+</tags>
+<status status="PASS" starttime="20190709 12:24:15.086" endtime="20190709 12:24:17.292" critical="yes"></status>
+</test>
+<doc>This is sample test case from blaze demo application https://blazedemo.com</doc>
+<status status="PASS" starttime="20190709 12:24:15.078" endtime="20190709 12:24:17.295"></status>
+</suite>
+<suite id="s1-s2" name="Search Sel Flight" source="C:\projects\python-workspace\robot-framework-UI\robot_tests\search_sel_flight.robot">
+<kw name="Open" library="SearchFlightPage" type="setup">
+<status status="PASS" starttime="20190709 12:24:20.093" endtime="20190709 12:24:21.414"></status>
+</kw>
+<test id="s1-s2-t1" name="The user can search for flights">
+<kw name="Select Departure City" library="SearchFlightPage">
+<arguments>
+<arg>Paris</arg>
+</arguments>
+<status status="PASS" starttime="20190709 12:24:21.416" endtime="20190709 12:24:21.765"></status>
+</kw>
+<kw name="Select Destination City" library="SearchFlightPage">
+<arguments>
+<arg>London</arg>
+</arguments>
+<status status="PASS" starttime="20190709 12:24:21.767" endtime="20190709 12:24:21.965"></status>
+</kw>
+<kw name="Submit The Login" library="SearchFlightPage">
+<status status="PASS" starttime="20190709 12:24:21.966" endtime="20190709 12:24:22.811"></status>
+</kw>
+<kw name="Get Found Flights" library="SearchFlightPage">
+<assign>
+<var>@{flights}</var>
+</assign>
+<msg timestamp="20190709 12:24:22.861" level="INFO">@{flights} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="47a901b5da41f8823623681be8b736da", element="6b868a50-0823-4428-84d5-e171c928b1bf")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20190709 12:24:22.815" endtime="20190709 12:24:22.861"></status>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is not empty.</doc>
+<arguments>
+<arg>${flights}</arg>
+</arguments>
+<msg timestamp="20190709 12:24:22.862" level="INFO">Length is 5</msg>
+<status status="PASS" starttime="20190709 12:24:22.862" endtime="20190709 12:24:22.863"></status>
+</kw>
+<tags>
+<tag>flights_sel</tag>
+</tags>
+<status status="PASS" starttime="20190709 12:24:21.414" endtime="20190709 12:24:22.863" critical="yes"></status>
+</test>
+<kw name="Close" library="SearchFlightPage" type="teardown">
+<status status="PASS" starttime="20190709 12:24:22.870" endtime="20190709 12:24:25.416"></status>
+</kw>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20190709 12:24:17.300" endtime="20190709 12:24:25.416"></status>
+</suite>
+<kw name="Close Browser" library="search_flights_keyword" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20190709 12:24:25.421" endtime="20190709 12:24:27.769"></status>
+</kw>
+<status status="PASS" starttime="20190709 12:24:25.420" endtime="20190709 12:24:27.769"></status>
+</kw>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20190709 12:24:11.947" endtime="20190709 12:24:27.770"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">flights_sel</stat>
+<stat pass="1" fail="0">search_flights</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Robot Tests">Robot Tests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Search Flights">Robot Tests.Search Flights</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Search Sel Flight">Robot Tests.Search Sel Flight</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

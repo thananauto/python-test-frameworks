@@ -1,0 +1,23 @@
+<testsuite errors="0" failures="0" hostname="LT-10000112" name="google.This is sample feature to test the google application" skipped="0" tests="2" time="19.237744" timestamp="2019-06-26T12:50:23.466950"><testcase classname="google.This is sample feature to test the google application" name="This is sample test to demo purpose - google application" status="passed" time="5.107518"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: This is sample test to demo purpose - google application
+    Given Launch the application url 'https://google.com' ... passed in 2.928s
+    When I search for the keyword 'python' ... passed in 2.152s
+    Then I can see the results wih links ... passed in 0.028s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="google.This is sample feature to test the google application" name="This is sample test to demo purpose - amazon web application" status="passed" time="14.130226"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: This is sample test to demo purpose - amazon web application
+    Given Launch the application url 'https://amazon.de' ... passed in 9.515s
+    When I search for the keyword 'dresses' ... passed in 4.537s
+    Then I can see the product information pages ... passed in 0.079s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

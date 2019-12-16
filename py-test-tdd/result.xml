@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="2" name="pytest" skipped="2" tests="9" time="0.129"><testcase classname="study_pytest.test_addition" file="study_pytest\test_addition.py" line="2" name="test_first_method1" time="0.001"></testcase><testcase classname="study_pytest.test_addition" file="study_pytest\test_addition.py" line="10" name="test_second_method2" time="0.000"></testcase><testcase classname="study_pytest.test_basic_fixture" file="study_pytest\test_basic_fixture.py" line="1" name="test_comparewithAA" time="0.001"></testcase><testcase classname="study_pytest.test_basic_fixture" file="study_pytest\test_basic_fixture.py" line="5" name="test_comparewithBB" time="0.001"><failure message="AssertionError: bb and zz comparison failed
+assert 35 == 305
+  -35
+  +305">supply_AA_BB_CC = [25, 35, 45]
+
+    def test_comparewithBB(supply_AA_BB_CC):
+        zz=305
+&gt;       assert supply_AA_BB_CC[1]==zz,&quot;bb and zz comparison failed&quot;
+E       AssertionError: bb and zz comparison failed
+E       assert 35 == 305
+E         -35
+E         +305
+
+study_pytest\test_basic_fixture.py:8: AssertionError</failure></testcase><testcase classname="study_pytest.test_basic_fixture" file="study_pytest\test_basic_fixture.py" line="9" name="test_comparewithCC" time="0.001"></testcase><testcase classname="study_pytest.test_basic_fixture" file="study_pytest\test_basic_fixture.py" line="13" name="test_with_arguments[2-3-5]" time="0.001"><skipped message="unconditional skip" type="pytest.skip">study_pytest\test_basic_fixture.py:13: unconditional skip</skipped></testcase><testcase classname="study_pytest.test_basic_fixture" file="study_pytest\test_basic_fixture.py" line="13" name="test_with_arguments[3-4-9]" time="0.001"><skipped message="unconditional skip" type="pytest.skip">study_pytest\test_basic_fixture.py:13: unconditional skip</skipped></testcase><testcase classname="study_pytest.test_subtraction" file="study_pytest\test_subtraction.py" line="2" name="test_file2_method1" time="0.001"><failure message="AssertionError: test failed because x=5 y=6
+assert 5 == 6
+  -5
+  +6">@pytest.mark.set1
+    def test_file2_method1():
+        x=5
+        y=6
+        assert x+1 == y,&quot;test failed&quot;
+&gt;       assert x == y,&quot;test failed because x=&quot; + str(x) + &quot; y=&quot; + str(y)
+E       AssertionError: test failed because x=5 y=6
+E       assert 5 == 6
+E         -5
+E         +6
+
+study_pytest\test_subtraction.py:8: AssertionError</failure></testcase><testcase classname="study_pytest.test_subtraction" file="study_pytest\test_subtraction.py" line="9" name="test_file2_method2" time="0.002"></testcase></testsuite>

@@ -1,0 +1,6 @@
+{
+  "timeout": 15,
+  "browser": "chrome",
+  "executionMode": "local"
+
+}
