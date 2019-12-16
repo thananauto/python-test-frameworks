@@ -2,3 +2,7 @@ venv/
 **/*.exe
 .idea/
 .*cache*/
+*results*/
+chrome/
+gecko/
+*.html
